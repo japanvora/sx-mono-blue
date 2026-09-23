@@ -1,0 +1,25 @@
+<!-- @dsCard group="Overlays" height=300 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dialog — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="sx-backdrop sx-backdrop--inline" style="margin:-24px;min-height:300px">
+<div class="sx-dialog" role="alertdialog" aria-modal="true" aria-labelledby="d1">
+<div class="sx-dialog__head"><h2 class="sx-dialog__title" id="d1">Stop this deployment?</h2></div>
+<div class="sx-dialog__body">Open orders will be cancelled at the broker and no new orders will be sent. Positions are not closed.</div>
+<div class="sx-dialog__foot"><button class="sx-btn sx-btn--secondary" type="button">Cancel</button><button class="sx-btn sx-btn--danger" type="button">Stop deployment</button></div>
+</div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- @dsCard group="Status" height=330 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alert — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="stack" style="gap:var(--space-3)">
+<div class="sx-alert sx-alert--info" role="status"><svg class="sx-alert__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><path d="M12 8h.01"/></svg><div class="sx-alert__body"><p class="sx-alert__title">Market closed</p><p class="sx-alert__text">Orders queue until 09:15 IST and route at the open.</p></div></div>
+<div class="sx-alert sx-alert--success" role="status"><svg class="sx-alert__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><div class="sx-alert__body"><p class="sx-alert__title">Broker connected</p><p class="sx-alert__text">Session token valid until 06:00 IST tomorrow.</p></div></div>
+<div class="sx-alert sx-alert--warning" role="status"><svg class="sx-alert__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><div class="sx-alert__body"><p class="sx-alert__title">Latency above threshold</p><p class="sx-alert__text">p95 is 180 ms against a 120 ms limit. Routing continues.</p></div></div>
+<div class="sx-alert sx-alert--danger" role="alert"><svg class="sx-alert__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6"/><path d="M15 9l-6 6"/></svg><div class="sx-alert__body"><p class="sx-alert__title">Order rejected by broker</p><p class="sx-alert__text">Insufficient margin. No retry was attempted.</p></div></div>
+</div>
+</div>
+
+</body>
+</html>

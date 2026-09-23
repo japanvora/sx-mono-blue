@@ -1,0 +1,24 @@
+<!-- @dsCard group="Forms" height=250 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Field — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row" style="align-items:flex-start;gap:var(--space-5)">
+<div class="sx-field" style="width:260px"><label class="sx-label" for="f1">Work email</label><input class="sx-input" id="f1" type="email" placeholder="you@firm.in" aria-describedby="f1h"><span class="sx-help" id="f1h">We reply within one business day.</span></div>
+<div class="sx-field is-invalid" style="width:260px"><label class="sx-label" for="f2">SEBI RA registration no.</label><input class="sx-input sx-input--mono" id="f2" value="INH00001" aria-invalid="true" aria-describedby="f2e"><span class="sx-error" id="f2e">Enter the full 12-character number.</span></div>
+<div class="sx-field" style="width:260px"><label class="sx-label" for="f3">Requirement <span class="sx-label__opt">(optional)</span></label><textarea class="sx-input" id="f3" placeholder="Instruments, timeframe, broker…"></textarea></div>
+</div>
+</div>
+
+</body>
+</html>

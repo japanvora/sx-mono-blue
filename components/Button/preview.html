@@ -1,0 +1,23 @@
+<!-- @dsCard group="Actions" height=150 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Button — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="stack">
+<div class="row"><button class="sx-btn" type="button">Book a call</button><button class="sx-btn sx-btn--secondary" type="button">View capabilities</button><button class="sx-btn sx-btn--ghost" type="button">Read docs</button><button class="sx-btn sx-btn--danger" type="button">Stop deployment</button></div>
+<div class="row"><button class="sx-btn sx-btn--lg" type="button">Get started</button><button class="sx-btn" type="button">Default</button><button class="sx-btn sx-btn--sm" type="button">Small</button><button class="sx-btn sx-btn--secondary sx-btn--sm" type="button">Export CSV</button><button class="sx-btn" type="button" disabled>Disabled</button></div>
+</div>
+</div>
+
+</body>
+</html>

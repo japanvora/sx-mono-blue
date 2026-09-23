@@ -1,0 +1,24 @@
+<!-- @dsCard group="Layout" height=260 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row" style="align-items:stretch;gap:var(--space-5)">
+<div class="sx-card" style="width:300px"><p class="sx-card__eyebrow">Data</p><h3 class="sx-card__title">Clean market data</h3><p class="sx-card__body">Adjusted, validated series delivered to your research stack on schedule.</p></div>
+<div class="sx-card sx-card--raised" style="width:300px"><p class="sx-card__eyebrow">Execution</p><h3 class="sx-card__title">Broker-compliant deployment</h3><p class="sx-card__body">IP-controlled, deterministic signal-to-broker pipeline.</p><div class="sx-card__footer"><a class="sx-btn sx-btn--sm" href="#">Book a call</a><a class="sx-btn sx-btn--ghost sx-btn--sm" href="#">Details</a></div></div>
+<div class="sx-card sx-card--muted" style="width:220px"><p class="sx-card__eyebrow">Note</p><p class="sx-card__body" style="margin:0">Muted cards hold secondary information.</p></div>
+</div>
+</div>
+
+</body>
+</html>

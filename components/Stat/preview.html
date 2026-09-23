@@ -1,0 +1,25 @@
+<!-- @dsCard group="Data" height=170 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stat — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="sx-stats">
+<div class="sx-stat"><p class="sx-stat__label">Latency p50</p><p class="sx-stat__value">42.8<span class="sx-stat__unit">ms</span></p><div class="sx-stat__meta"><span class="sx-stat__delta sx-stat__delta--up">−3.1 ms</span><span>vs last session</span></div></div>
+<div class="sx-stat"><p class="sx-stat__label">Uptime (30d)</p><p class="sx-stat__value">99.98<span class="sx-stat__unit">%</span></p><div class="sx-stat__meta"><span>1 incident</span></div></div>
+<div class="sx-stat"><p class="sx-stat__label">Orders routed</p><p class="sx-stat__value">12,480</p><div class="sx-stat__meta"><span class="sx-stat__delta sx-stat__delta--up">+8.2%</span><span>today</span></div></div>
+<div class="sx-stat"><p class="sx-stat__label">Rejections</p><p class="sx-stat__value">7</p><div class="sx-stat__meta"><span class="sx-stat__delta sx-stat__delta--down">+4</span><span>margin, freeze qty</span></div></div>
+</div>
+</div>
+
+</body>
+</html>

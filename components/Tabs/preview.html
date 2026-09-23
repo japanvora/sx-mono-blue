@@ -1,0 +1,29 @@
+<!-- @dsCard group="Navigation" height=150 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tabs — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="sx-tabs" role="tablist" aria-label="Deployment">
+<button class="sx-tab" role="tab" id="t1" aria-controls="p1" aria-selected="true" type="button">Overview</button>
+<button class="sx-tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1" type="button">Orders</button>
+<button class="sx-tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1" type="button">Logs</button>
+<button class="sx-tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1" type="button">Settings</button>
+</div>
+<div class="sx-tabpanel" role="tabpanel" id="p1" aria-labelledby="t1">Summary of the deployment's health and today's activity.</div>
+<div class="sx-tabpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>Order log with broker acknowledgements.</div>
+<div class="sx-tabpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>Structured logs, newest first.</div>
+<div class="sx-tabpanel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>Risk limits and broker configuration.</div>
+</div>
+<script>window.SX&&SX.initTabs(document);</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stateXchange — Mono Blue example</title>
+<link rel="stylesheet" href="../components/tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+</head>
+<body class="sx">
+<header class="sx-nav sx-nav--sticky">
+  <div class="sx-container sx-nav__inner">
+    <a class="sx-logo sx-logo--sm" href="#" aria-label="stateXchange">
+      <svg class="sx-logo__mark" viewBox="0 0 100 100" aria-hidden="true">
+        <polyline class="sx-logo__top" points="82,8 24,44 48,60"/>
+        <polyline class="sx-logo__bot" points="52,40 76,56 18,92"/>
+      </svg>
+      <span class="sx-logo__text"><span class="sx-logo__word">state<span class="sx-logo__x">X</span>change</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="sx-nav__links">
+        <li><a class="sx-nav__link" href="#" aria-current="page">Capabilities</a></li>
+        <li><a class="sx-nav__link" href="#">How we work</a></li>
+        <li><a class="sx-nav__link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sx-nav__actions">
+      <button class="sx-btn sx-btn--ghost sx-btn--sm" type="button" id="theme">Theme</button>
+      <a class="sx-btn sx-btn--sm" href="#">Book a call</a>
+      <button class="sx-icon-btn sx-nav__toggle" type="button" aria-label="Open menu" data-sx-drawer-open="menu"><i data-sx-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="sx-hero sx-hero--grid">
+  <div class="sx-container">
+    <p class="sx-hero__eyebrow">For systematic trading</p>
+    <h1 class="sx-hero__title">Precision execution <em>infrastructure</em></h1>
+    <p class="sx-hero__lede">Institution-grade execution environments, built to each client's requirement.</p>
+    <div class="sx-hero__actions"><a class="sx-btn sx-btn--lg" href="#">Book a call</a><a class="sx-btn sx-btn--secondary sx-btn--lg" href="#">View capabilities</a></div>
+    <ul class="sx-hero__points"><li>Private</li><li>Controlled</li><li>Deterministic</li></ul>
+  </div>
+</section>
+
+<main class="sx-container" style="padding-bottom:var(--space-8)">
+  <div class="sx-stats" style="margin-bottom:var(--space-6)">
+    <div class="sx-stat"><p class="sx-stat__label">Latency p50</p><p class="sx-stat__value">42.8<span class="sx-stat__unit">ms</span></p><div class="sx-stat__meta"><span class="sx-stat__delta sx-stat__delta--up">-3.1 ms</span><span>vs last session</span></div></div>
+    <div class="sx-stat"><p class="sx-stat__label">Uptime (30d)</p><p class="sx-stat__value">99.98<span class="sx-stat__unit">%</span></p><div class="sx-stat__meta"><span>1 incident</span></div></div>
+    <div class="sx-stat"><p class="sx-stat__label">Orders routed</p><p class="sx-stat__value">12,480</p><div class="sx-stat__meta"><span>today</span></div></div>
+  </div>
+
+  <div class="sx-card" style="margin-bottom:var(--space-6)">
+    <h3 class="sx-card__title" style="margin-bottom:var(--space-3)">Order latency · today</h3>
+    <div data-sx-chart='{"type":"line","labels":["09:15","10:45","12:15","13:45","15:15"],"unit":" ms","zero":true,"series":[{"name":"p50","values":[44,39,38,39,40]},{"name":"p95","values":[118,88,85,90,97]}]}'></div>
+  </div>
+
+  <div class="sx-table-wrap">
+    <table class="sx-table">
+      <thead><tr><th scope="col">Instrument</th><th scope="col">Status</th><th scope="col" class="is-num">Orders</th><th scope="col">Last update</th></tr></thead>
+      <tbody>
+        <tr><td class="is-primary">NIFTY FUT</td><td><span class="sx-badge sx-badge--success"><span class="sx-badge__dot"></span>Live</span></td><td class="is-num">4,812</td><td class="is-code">14:32:05</td></tr>
+        <tr><td class="is-primary">CRUDEOIL FUT</td><td><span class="sx-badge sx-badge--warning"><span class="sx-badge__dot"></span>Paused</span></td><td class="is-num">1,264</td><td class="is-code">13:58:41</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer class="sx-footer">
+  <div class="sx-container">
+    <p class="sx-disclaimer"><strong>Disclaimer. </strong>stateXchange provides execution and infrastructure tooling. It does not provide investment advice, recommendations, or portfolio management services. Users are solely responsible for their trading decisions and regulatory compliance.</p>
+    <div class="sx-footer__base"><span>&copy; 2026 [Legal entity name]. stateXchange is a trade name.</span><span>[grievance email]</span></div>
+  </div>
+</footer>
+
+<div class="sx-drawer-backdrop" data-sx-drawer-backdrop="menu" hidden></div>
+<div class="sx-drawer" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="sx-drawer__head"><span class="sx-logo sx-logo--sm"><span class="sx-logo__text"><span class="sx-logo__word">state<span class="sx-logo__x">X</span>change</span></span></span><button class="sx-icon-btn sx-icon-btn--ghost" type="button" aria-label="Close menu" data-sx-drawer-close><i data-sx-icon="x"></i></button></div>
+  <ul class="sx-drawer__links">
+    <li><a class="sx-drawer__link" href="#" aria-current="page">Capabilities<i data-sx-icon="chevron-right"></i></a></li>
+    <li><a class="sx-drawer__link" href="#">How we work<i data-sx-icon="chevron-right"></i></a></li>
+    <li><a class="sx-drawer__link" href="#">Contact<i data-sx-icon="chevron-right"></i></a></li>
+  </ul>
+  <div class="sx-drawer__foot"><a class="sx-btn sx-btn--block" href="#">Book a call</a></div>
+</div>
+
+<script src="../components/bundle.js"></script>
+<script>
+  SX.initTheme(); SX.initIcons(); SX.initNav(); SX.renderCharts();
+  document.getElementById("theme").onclick = function () {
+    SX.setTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  };
+</script>
+</body>
+</html>

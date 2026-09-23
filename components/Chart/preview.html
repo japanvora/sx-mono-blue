@@ -1,0 +1,29 @@
+<!-- @dsCard group="Data" height=680 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-5)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row" style="flex-wrap:nowrap">
+<div class="sx-card" style="flex:1;min-width:0"><p class="sx-card__eyebrow">Latency</p><h3 class="sx-card__title" style="margin-bottom:var(--space-3)">Order latency · today</h3><div data-sx-chart='{"type": "line", "label": "Order latency across the session", "labels": ["09:15", "10:00", "10:45", "11:30", "12:15", "13:00", "13:45", "14:30", "15:15"], "unit": " ms", "width": 440, "height": 220, "zero": true, "series": [{"name": "p50", "values": [44, 41, 39, 40, 38, 37, 39, 42, 40]}, {"name": "p95", "values": [118, 96, 88, 92, 85, 81, 90, 104, 97]}]}'></div></div>
+<div class="sx-card" style="flex:1;min-width:0"><p class="sx-card__eyebrow">Throughput</p><h3 class="sx-card__title" style="margin-bottom:var(--space-3)">Orders routed per hour</h3><div data-sx-chart='{"type": "bar", "label": "Orders routed per hour", "labels": ["09", "10", "11", "12", "13", "14", "15"], "width": 440, "height": 220, "series": [{"name": "NSE", "values": [1840, 1320, 980, 760, 820, 1210, 1690]}, {"name": "MCX", "values": [410, 380, 290, 260, 300, 520, 640]}]}'></div></div>
+</div>
+<div class="row" style="flex-wrap:nowrap;margin-top:var(--space-5)">
+<div class="sx-card" style="flex:1;min-width:0"><h3 class="sx-card__title" style="margin-bottom:var(--space-3)">Server CPU · 24h</h3><div data-sx-chart='{"type": "area", "label": "CPU utilisation", "labels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"], "unit": "%", "width": 440, "height": 160, "yMin": 0, "yMax": 100, "maxLabels": 6, "series": [{"name": "CPU", "values": [22, 24, 21, 26, 31, 38, 44, 41, 39, 36, 34, 37, 42, 48, 52, 49, 45, 40, 33, 29, 27, 25, 24, 23]}]}'></div></div>
+<div class="stack" style="flex:1;min-width:0">
+<div class="sx-stat"><p class="sx-stat__label">Latency p50</p><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px"><p class="sx-stat__value">40.0<span class="sx-stat__unit">ms</span></p><span data-sx-spark='{"values":[44,41,39,40,38,37,39,42,40],"tone":"up","width":110,"height":34}'></span></div></div>
+<div class="sx-stat"><p class="sx-stat__label">Rejections</p><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px"><p class="sx-stat__value">7</p><span data-sx-spark='{"values":[1,0,2,1,3,2,4,5,7],"tone":"down","width":110,"height":34}'></span></div></div>
+</div></div>
+</div>
+<script>SX.renderCharts(document);</script>
+</body>
+</html>

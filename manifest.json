@@ -1,0 +1,226 @@
+{
+ "manifestVersion": 3,
+ "name": "stateXchange — Mono Blue UI",
+ "namespace": "SX",
+ "libraries": [
+  {
+   "name": "react",
+   "version": "18.3.1",
+   "global": "React"
+  },
+  {
+   "name": "react-dom",
+   "version": "18.3.1",
+   "global": "ReactDOM"
+  }
+ ],
+ "components": [
+  {
+   "name": "Logo",
+   "group": "Brand",
+   "summary": "The stateXchange lockup — angular two-piece S mark plus the wordmark with the enlarged X — rendered from tokens so it switches with the theme."
+  },
+  {
+   "name": "Icon",
+   "group": "Foundations",
+   "summary": "The stateXchange line-icon set — 52 icons on a 24px grid, 2px stroke, round caps, drawn in `currentColor` so they take the text colour around them."
+  },
+  {
+   "name": "Button",
+   "group": "Actions",
+   "summary": "The single action control — four variants, three sizes, always one primary per view."
+  },
+  {
+   "name": "Link",
+   "group": "Actions",
+   "summary": "Inline navigation inside text, in `accent-text` with a 1px underline that thickens on hover."
+  },
+  {
+   "name": "Field",
+   "group": "Forms",
+   "summary": "A labelled text input or textarea with optional help or error text — the base of every form."
+  },
+  {
+   "name": "Select",
+   "group": "Forms",
+   "summary": "A native `<select>` styled to match Field, with a token-coloured chevron."
+  },
+  {
+   "name": "Checkbox",
+   "group": "Forms",
+   "summary": "Native checkbox or radio with its label, tinted with `accent` via `accent-color`."
+  },
+  {
+   "name": "Switch",
+   "group": "Forms",
+   "summary": "An on/off toggle that takes effect immediately — a checkbox with `role=\"switch\"`."
+  },
+  {
+   "name": "Badge",
+   "group": "Status",
+   "summary": "A compact status or category pill."
+  },
+  {
+   "name": "Alert",
+   "group": "Status",
+   "summary": "An inline message about system state — info, success, warning or danger — with title, one-line explanation and icon."
+  },
+  {
+   "name": "Toast",
+   "group": "Status",
+   "summary": "A short, non-blocking message confirming an action or reporting a background event, stacked bottom-right."
+  },
+  {
+   "name": "EmptyState",
+   "group": "Status",
+   "summary": "What a table, list or dashboard shows when it has nothing to show — icon, one-line title, one-sentence explanation and at most one action."
+  },
+  {
+   "name": "Card",
+   "group": "Layout",
+   "summary": "The default container for a grouped piece of content, with optional eyebrow, title, body and footer."
+  },
+  {
+   "name": "Stat",
+   "group": "Data",
+   "summary": "A KPI tile: uppercase label, large mono value with unit, and an optional delta + context line."
+  },
+  {
+   "name": "Chart",
+   "group": "Data",
+   "summary": "Token-coloured SVG charts — line, area and bar — plus inline sparklines, with mono axis labels, hairline gridlines and no chart library."
+  },
+  {
+   "name": "DataTable",
+   "group": "Data",
+   "summary": "A horizontally scrollable data table with uppercase headers, right-aligned mono numbers and row hover."
+  },
+  {
+   "name": "Pagination",
+   "group": "Navigation",
+   "summary": "Page navigation for long tables and logs: a \"Showing 126–150 of 312\" summary on the left, previous/next plus numbered pages on the right."
+  },
+  {
+   "name": "Tabs",
+   "group": "Navigation",
+   "summary": "Switches between sibling views of one object (a deployment's Overview / Orders / Logs) without leaving the page."
+  },
+  {
+   "name": "Navbar",
+   "group": "Navigation",
+   "summary": "The top bar: logo left, primary links centre, at most two actions right, `nav-height` tall with a hairline bottom border — with a built-in mobile drawer."
+  },
+  {
+   "name": "MobileMenu",
+   "group": "Navigation",
+   "summary": "The small-screen navigation: a menu button in the Navbar (shown below 720px, or always with `sx-nav--compact`) opens a right-side drawer with large tap-target links and full-width actions."
+  },
+  {
+   "name": "Hero",
+   "group": "Marketing",
+   "summary": "The landing-page opener: eyebrow, one headline, a lede, up to two CTAs and a mono proof-point row."
+  },
+  {
+   "name": "SectionHeader",
+   "group": "Marketing",
+   "summary": "The eyebrow + heading + lede block that opens each page section."
+  },
+  {
+   "name": "FeatureGrid",
+   "group": "Marketing",
+   "summary": "A numbered grid of capabilities — mono index, title, one-sentence body — in auto-fit columns."
+  },
+  {
+   "name": "Footer",
+   "group": "Layout",
+   "summary": "The site footer: logo + one-line positioning, 2–3 link columns, the Disclaimer, and the legal line with the registered entity name."
+  },
+  {
+   "name": "Disclaimer",
+   "group": "Compliance",
+   "summary": "The standard regulatory notice, set small in `ink-3` above a hairline — required on every public page and in every client-facing export."
+  },
+  {
+   "name": "Dialog",
+   "group": "Overlays",
+   "summary": "A modal confirmation for consequential actions — title as a question, body stating exactly what will and will not happen, actions right-aligned."
+  }
+ ],
+ "assetGroups": [
+  {
+   "name": "Logos",
+   "order": [
+    "stateXchange-lockup-black.svg",
+    "stateXchange-lockup-dark.svg",
+    "stateXchange-lockup-tagline.svg",
+    "stateXchange-lockup.svg",
+    "stateXchange-mark-black.svg",
+    "stateXchange-mark-dark.svg",
+    "stateXchange-mark.svg"
+   ]
+  },
+  {
+   "name": "ORION",
+   "order": [
+    "orion-lockup-black.svg",
+    "orion-lockup-dark.svg",
+    "orion-lockup-endorsed-dark.svg",
+    "orion-lockup-endorsed.svg",
+    "orion-lockup.svg",
+    "orion-mark-dark.svg",
+    "orion-mark-small.svg",
+    "orion-mark.svg"
+   ]
+  },
+  {
+   "name": "MIZAR",
+   "order": [
+    "mizar-lockup-dark.svg",
+    "mizar-lockup-endorsed-dark.svg",
+    "mizar-lockup-endorsed.svg",
+    "mizar-lockup.svg",
+    "mizar-mark-small.svg",
+    "mizar-mark.svg"
+   ]
+  },
+  {
+   "name": "MERAK",
+   "order": [
+    "merak-lockup-dark.svg",
+    "merak-lockup-endorsed-dark.svg",
+    "merak-lockup-endorsed.svg",
+    "merak-lockup.svg",
+    "merak-mark-small.svg",
+    "merak-mark.svg"
+   ]
+  },
+  {
+   "name": "ORBIT",
+   "order": [
+    "orbit-lockup-dark.svg",
+    "orbit-lockup-endorsed-dark.svg",
+    "orbit-lockup-endorsed.svg",
+    "orbit-lockup.svg",
+    "orbit-mark-small.svg",
+    "orbit-mark.svg"
+   ]
+  },
+  {
+   "name": "EIGEN",
+   "order": [
+    "eigen-lockup-dark.svg",
+    "eigen-lockup-endorsed-dark.svg",
+    "eigen-lockup-endorsed.svg",
+    "eigen-lockup.svg",
+    "eigen-mark-small.svg",
+    "eigen-mark.svg"
+   ]
+  }
+ ],
+ "lastChange": {
+  "by": "Neo",
+  "via": "claude.ai chat",
+  "at": "2026-09-23T16:02:18Z",
+  "note": "Rebuilt manifest.json: component catalogue and asset groups registered."
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@statexchange/mono-blue",
+  "version": "1.0.0",
+  "description": "stateXchange Mono Blue \u2014 design tokens and UI components (framework-agnostic CSS classes + optional React wrappers).",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "components/bundle.js",
+  "style": "components/bundle.css",
+  "types": "components/index.d.ts",
+  "files": [
+    "components",
+    "assets",
+    "tokens.json",
+    "manifest.json",
+    "README.md"
+  ],
+  "scripts": {
+    "tokens": "node scripts/build-tokens.js"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

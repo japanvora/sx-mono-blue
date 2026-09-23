@@ -1,0 +1,27 @@
+<!-- @dsCard group="Data" height=290 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DataTable — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="sx-table-wrap"><table class="sx-table">
+<thead><tr><th scope="col">Instrument</th><th scope="col">Exchange</th><th scope="col">Status</th><th scope="col" class="is-num">Orders</th><th scope="col" class="is-num">p50 latency</th><th scope="col">Last update</th></tr></thead>
+<tbody>
+<tr><td class="is-primary">NIFTY FUT</td><td>NSE</td><td><span class="sx-badge sx-badge--success"><span class="sx-badge__dot"></span>Live</span></td><td class="is-num">4,812</td><td class="is-num">38.2 ms</td><td class="is-code">14:32:05</td></tr>
+<tr><td class="is-primary">BANKNIFTY FUT</td><td>NSE</td><td><span class="sx-badge sx-badge--success"><span class="sx-badge__dot"></span>Live</span></td><td class="is-num">3,907</td><td class="is-num">41.0 ms</td><td class="is-code">14:32:04</td></tr>
+<tr><td class="is-primary">CRUDEOIL FUT</td><td>MCX</td><td><span class="sx-badge sx-badge--warning"><span class="sx-badge__dot"></span>Paused</span></td><td class="is-num">1,264</td><td class="is-num">52.7 ms</td><td class="is-code">13:58:41</td></tr>
+<tr><td class="is-primary">SILVER FUT</td><td>MCX</td><td><span class="sx-badge sx-badge--danger"><span class="sx-badge__dot"></span>Error</span></td><td class="is-num">0</td><td class="is-num">—</td><td class="is-code">09:15:00</td></tr>
+</tbody></table></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Forms" height=110 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Checkbox — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="stack" style="gap:var(--space-3)">
+<label class="sx-check"><input type="checkbox" checked> I have read the terms of use</label>
+<label class="sx-check"><input type="checkbox"> Send me release notes by email</label>
+<div class="row" style="gap:var(--space-5)"><label class="sx-check"><input type="radio" name="r" checked> Intraday</label><label class="sx-check"><input type="radio" name="r"> Positional</label><label class="sx-check"><input type="checkbox" disabled> Disabled</label></div>
+</div>
+</div>
+
+</body>
+</html>

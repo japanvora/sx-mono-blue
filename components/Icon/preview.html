@@ -1,0 +1,21 @@
+<!-- @dsCard group="Foundations" height=470 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Icon — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-5)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:var(--space-2)"></div>
+<div class="row" style="margin-top:var(--space-5);align-items:center"><button class="sx-btn" type="button"><svg class="sx-icon sx-btn__icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Export CSV</button><button class="sx-btn sx-btn--secondary" type="button"><svg class="sx-icon sx-btn__icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg>Reconnect</button><button class="sx-icon-btn" type="button" aria-label="Settings"><svg class="sx-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></button><button class="sx-icon-btn sx-icon-btn--ghost" type="button" aria-label="More"><svg class="sx-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h.01"/><path d="M12 12h.01"/><path d="M19 12h.01"/></svg></button></div>
+</div>
+<script>var g=document.getElementById("grid");g.innerHTML=SX.iconNames.map(function(n){return '<div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 4px;border:1px solid var(--border);border-radius:var(--radius-md);color:var(--ink)">'+SX.icon(n,{size:22})+'<span style="font-family:var(--font-mono);font-size:10.5px;line-height:14px;color:var(--ink-3)">'+n+'</span></div>';}).join("");</script>
+</body>
+</html>

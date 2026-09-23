@@ -1,0 +1,132 @@
+/* stateXchange — Mono Blue: design tokens. Generated from tokens.json. Load before bundle.css. */
+:root,
+[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f6f8fc;
+  --surface-2: #eef2fa;
+  --border: #e1e5ef;
+  --border-control: #8790a8;
+  --ink: #111633;
+  --ink-2: #3d4566;
+  --ink-3: #5b6378;
+  --primary: #191970;
+  --primary-hover: #10105a;
+  --on-primary: #ffffff;
+  --accent: #2f6bff;
+  --accent-text: #1f55e0;
+  --accent-soft: #eaf0ff;
+  --focus: #2f6bff;
+  --success: #0f7a4d;
+  --success-soft: #e6f4ee;
+  --warning: #8a5a00;
+  --warning-soft: #fff4dc;
+  --danger: #b42318;
+  --on-danger: #ffffff;
+  --danger-soft: #fdecea;
+  --overlay: rgba(11,15,30,0.55);
+  --logo-base: #191970;
+  --logo-accent: #2f6bff;
+  --logo-text: #191970;
+  --chart-1: #2f6bff;
+  --chart-2: #191970;
+  --chart-3: #5e7bd6;
+  --chart-4: #5b6378;
+  --shadow-sm: 0 1px 2px rgba(17,22,51,0.06);
+  --shadow-md: 0 8px 24px rgba(17,22,51,0.08);
+  --shadow-lg: 0 24px 48px rgba(17,22,51,0.16);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --control-sm: 32px;
+  --control-md: 40px;
+  --control-lg: 48px;
+  --nav-height: 64px;
+  --container: 1200px;
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f1e;
+  --surface: #121731;
+  --surface-2: #1a2142;
+  --border: #262e52;
+  --border-control: #5a6490;
+  --ink: #f2f4f9;
+  --ink-2: #c3c9db;
+  --ink-3: #9aa3b8;
+  --primary: #7aa2ff;
+  --primary-hover: #9dbbff;
+  --on-primary: #0b0f1e;
+  --accent: #7aa2ff;
+  --accent-text: #9dbbff;
+  --accent-soft: #1b2550;
+  --focus: #7aa2ff;
+  --success: #3dd68c;
+  --success-soft: #0f2e24;
+  --warning: #f2c14e;
+  --warning-soft: #2e2610;
+  --danger: #ff7a6e;
+  --on-danger: #0b0f1e;
+  --danger-soft: #3a1a1c;
+  --overlay: rgba(0,0,0,0.65);
+  --logo-base: #dce3ff;
+  --logo-accent: #7aa2ff;
+  --logo-text: #f2f4f9;
+  --chart-1: #7aa2ff;
+  --chart-2: #dce3ff;
+  --chart-3: #4b5fa8;
+  --chart-4: #9aa3b8;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.40);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.50);
+  --shadow-lg: 0 24px 48px rgba(0,0,0,0.60);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b0f1e;
+    --surface: #121731;
+    --surface-2: #1a2142;
+    --border: #262e52;
+    --border-control: #5a6490;
+    --ink: #f2f4f9;
+    --ink-2: #c3c9db;
+    --ink-3: #9aa3b8;
+    --primary: #7aa2ff;
+    --primary-hover: #9dbbff;
+    --on-primary: #0b0f1e;
+    --accent: #7aa2ff;
+    --accent-text: #9dbbff;
+    --accent-soft: #1b2550;
+    --focus: #7aa2ff;
+    --success: #3dd68c;
+    --success-soft: #0f2e24;
+    --warning: #f2c14e;
+    --warning-soft: #2e2610;
+    --danger: #ff7a6e;
+    --on-danger: #0b0f1e;
+    --danger-soft: #3a1a1c;
+    --overlay: rgba(0,0,0,0.65);
+    --logo-base: #dce3ff;
+    --logo-accent: #7aa2ff;
+    --logo-text: #f2f4f9;
+    --chart-1: #7aa2ff;
+    --chart-2: #dce3ff;
+    --chart-3: #4b5fa8;
+    --chart-4: #9aa3b8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.40);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.50);
+    --shadow-lg: 0 24px 48px rgba(0,0,0,0.60);
+  }
+}

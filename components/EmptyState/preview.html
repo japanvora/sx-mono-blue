@@ -1,0 +1,23 @@
+<!-- @dsCard group="Status" height=330 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EmptyState — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-5)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row" style="flex-wrap:nowrap">
+<div class="sx-empty" style="flex:1"><div class="sx-empty__icon" aria-hidden="true"><svg class="sx-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="7" rx="1.5"/><rect x="4" y="13" width="16" height="7" rx="1.5"/><path d="M8 7.5h.01"/><path d="M8 16.5h.01"/></svg></div><h3 class="sx-empty__title">No deployments yet</h3><p class="sx-empty__text">Deployments appear here once your system is configured and connected to a broker.</p><div class="sx-empty__actions"><a class="sx-btn" href="#">Book a setup call</a></div></div>
+<div class="sx-empty" style="flex:1"><div class="sx-empty__icon" aria-hidden="true"><svg class="sx-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3 class="sx-empty__title">No orders match these filters</h3><p class="sx-empty__text">Try a wider date range or clear the status filter.</p><div class="sx-empty__actions"><button class="sx-btn sx-btn--secondary" type="button">Clear filters</button></div></div>
+</div>
+</div>
+
+</body>
+</html>

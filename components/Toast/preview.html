@@ -1,0 +1,28 @@
+<!-- @dsCard group="Status" height=330 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Toast — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-5)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row">
+<div class="sx-toaster sx-toaster--inline">
+<div class="sx-toast sx-toast--success" role="status"><svg class="sx-icon sx-toast__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><div class="sx-toast__body"><p class="sx-toast__title">Settings saved</p><p class="sx-toast__text">Risk limits apply from the next order.</p></div><button class="sx-toast__close" type="button" aria-label="Dismiss"><svg class="sx-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+<div class="sx-toast sx-toast--info" role="status"><svg class="sx-icon sx-toast__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><path d="M12 8h.01"/></svg><div class="sx-toast__body"><p class="sx-toast__title">Export started</p><p class="sx-toast__text">You'll get an email when the CSV is ready.</p></div><button class="sx-toast__close" type="button" aria-label="Dismiss"><svg class="sx-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+<div class="sx-toast sx-toast--danger" role="alert"><svg class="sx-icon sx-toast__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6"/><path d="M15 9l-6 6"/></svg><div class="sx-toast__body"><p class="sx-toast__title">Broker session expired</p><p class="sx-toast__text">Routing is paused. Log in again to resume.</p></div><button class="sx-toast__close" type="button" aria-label="Dismiss"><svg class="sx-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+</div>
+<div class="stack" style="gap:var(--space-2)"><button class="sx-btn sx-btn--secondary sx-btn--sm" type="button" id="b1">Trigger success</button><button class="sx-btn sx-btn--secondary sx-btn--sm" type="button" id="b2">Trigger danger</button></div>
+</div>
+</div>
+<script>document.getElementById("b1").onclick=function(){SX.toast({tone:"success",title:"Deployment updated",text:"Changes are live."});};
+document.getElementById("b2").onclick=function(){SX.toast({tone:"danger",title:"Order rejected",text:"Insufficient margin. Dismiss to close."});};</script>
+</body>
+</html>

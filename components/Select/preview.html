@@ -1,0 +1,23 @@
+<!-- @dsCard group="Forms" height=120 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Select — preview</title>
+<style>
+html,body{margin:0}
+body{padding:24px;background:var(--bg);color:var(--ink);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+</head>
+<body class="sx">
+<div id="root">
+<div class="row" style="align-items:flex-start;gap:var(--space-5)">
+<div class="sx-field" style="width:240px"><label class="sx-label" for="s1">Segment</label><div class="sx-select-wrap"><select class="sx-select" id="s1"><option>NSE F&amp;O</option><option>MCX commodities</option><option>NSE cash</option></select></div></div>
+<div class="sx-field" style="width:240px"><label class="sx-label" for="s2">Broker</label><div class="sx-select-wrap"><select class="sx-select" id="s2" disabled><option>Zerodha</option></select></div><span class="sx-help">Locked after deployment.</span></div>
+</div>
+</div>
+
+</body>
+</html>
