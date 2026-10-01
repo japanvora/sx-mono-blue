@@ -53,7 +53,7 @@ export declare function Stat(p: StatProps): JSX.Element;
 
 /** Data table. Default compact (34px), all cell borders, no wrap. Classes: sx-table-wrap, sx-table, sx-table--dense (default), sx-table--comfortable; cell modifiers is-num, is-primary, is-code, is-wrap. Key/value blocks: sx-kv. */
 export interface DataTableColumn<R = any> { key: string; header: ReactNode; align?: "left" | "right"; kind?: "primary" | "code"; render?: (row: R) => ReactNode }
-export interface DataTableProps<R = any> { columns: DataTableColumn<R>[]; rows: R[]; dense?: boolean; caption?: string }
+export interface DataTableProps<R = any> { columns: DataTableColumn<R>[]; rows: R[]; comfortable?: boolean; /** @deprecated compact is default */ dense?: boolean; caption?: string }
 export declare function DataTable(p: DataTableProps): JSX.Element;
 
 /** Tab set. Classes: sx-tabs, sx-tab, sx-tabpanel (ARIA tablist; aria-selected drives the style). */
