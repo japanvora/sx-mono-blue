@@ -129,7 +129,7 @@ textarea.sx-input{height:auto;min-height:96px;padding:10px var(--space-3);resize
 .sx-table th.is-num{text-align:right}
 .sx-table .is-primary{font-weight:600;color:var(--ink)}
 .sx-table .is-code{font-family:var(--font-mono);font-size:13px}
-.sx-table--dense td{padding:6px var(--space-4)}
+.sx-table--dense td{padding:6px var(--space-3)}
 .sx-table th,.sx-table td{padding:var(--space-1-5) var(--space-3);border:1px solid var(--border);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sx-table tr>:first-child{border-left:0}
 .sx-table tr>:last-child{border-right:0}
