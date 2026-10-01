@@ -199,7 +199,7 @@ if(R){
   };
   SX.DataTable=function(p){
     var cols=p.columns||[];
-    return h("table",{className:cx("sx-table",p.comfortable?"sx-table--comfortable":"sx-table--dense")},,
+    return h("div",{className:"sx-table-wrap"},h("table",{className:cx("sx-table",p.comfortable?"sx-table--comfortable":"sx-table--dense")},
       p.caption?h("caption",{style:{position:"absolute",left:"-9999px"}},p.caption):null,
       h("thead",null,h("tr",null,cols.map(function(c){return h("th",{key:c.key,scope:"col",className:c.align==="right"?"is-num":null},c.header);}))),
       h("tbody",null,(p.rows||[]).map(function(r,ri){return h("tr",{key:r.id||ri},cols.map(function(c){var v=c.render?c.render(r):r[c.key];return h("td",{key:c.key,className:cx(c.align==="right"&&"is-num",c.kind==="primary"&&"is-primary",c.kind==="code"&&"is-code")},v);}));}))));
