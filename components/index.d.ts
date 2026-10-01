@@ -51,7 +51,7 @@ export declare function Card(p: CardProps): JSX.Element;
 export interface StatProps { label: ReactNode; value: ReactNode; unit?: ReactNode; delta?: string; deltaDirection?: "up" | "down"; meta?: ReactNode; className?: string }
 export declare function Stat(p: StatProps): JSX.Element;
 
-/** Data table. Classes: sx-table-wrap, sx-table, sx-table--dense; cell modifiers is-num, is-primary, is-code. */
+/** Data table. Default compact (34px), all cell borders, no wrap. Classes: sx-table-wrap, sx-table, sx-table--dense (default), sx-table--comfortable; cell modifiers is-num, is-primary, is-code, is-wrap. Key/value blocks: sx-kv. */
 export interface DataTableColumn<R = any> { key: string; header: ReactNode; align?: "left" | "right"; kind?: "primary" | "code"; render?: (row: R) => ReactNode }
 export interface DataTableProps<R = any> { columns: DataTableColumn<R>[]; rows: R[]; dense?: boolean; caption?: string }
 export declare function DataTable(p: DataTableProps): JSX.Element;
