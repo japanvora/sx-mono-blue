@@ -35,6 +35,7 @@
   --shadow-md: 0 8px 24px rgba(17,22,51,0.08);
   --shadow-lg: 0 24px 48px rgba(17,22,51,0.16);
   --space-1: 4px;
+  --space-1-5: 6px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -52,6 +53,7 @@
   --control-lg: 48px;
   --nav-height: 64px;
   --container: 1200px;
+  --width-cell-wrap: 220px;
   --font-display: "Montserrat", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
