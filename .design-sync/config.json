@@ -1,0 +1,24 @@
+{
+  "shape": "package",
+  "pkg": "@statexchange/mono-blue",
+  "globalName": "SX",
+  "cssEntry": ".design-sync/.cache/sx-mono-blue.css",
+  "docsDir": "components",
+  "componentSrcMap": {
+    "Toast": null
+  },
+  "libOverrides": {
+    "docs.mjs": "per-component README.md in a component-named folder under docsDir, grouped like the hand-made project"
+  },
+  "docsMap": {
+    "Sparkline": "components/Chart/README.md"
+  },
+  "buildCmd": "mkdir -p .design-sync/.cache && cat components/tokens.css components/bundle.css > .design-sync/.cache/sx-mono-blue.css",
+  "overrides": {
+    "DataTable": {
+      "cardMode": "column"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md",
+  "projectId": "c1f0db7b-264d-406c-964c-2b547600becd"
+}
