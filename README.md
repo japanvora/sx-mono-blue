@@ -22,7 +22,7 @@ The interface system for stateXchange web apps and sites: Midnight and Electric 
 
 **Space & layout.** 4px base; `space-5` (24) is the workhorse — card padding, grid gutters, container side padding. Content max width `container` (1200px). Sections `space-8` apart, hero `space-9`. Controls are `control-md` (40px) by default.
 
-**Shape & depth.** `radius-md` (10) for controls, `radius-lg` (14) for cards, tables, dialogs; `radius-pill` only for badges and switches. Hairline `border` first, shadow second: `shadow-md` for the single raised card, `shadow-lg` for dialogs only. No gradients, no glass, no glow.
+**Shape & depth.** Corners are nearly square: `radius-sm` (2) for checkboxes, badges and tags, `radius-md` (3) for controls, `radius-lg` (4) for cards, tables, dialogs; `radius-pill` only for switches. Hairline `border` first, shadow second: `shadow-md` for the single raised card, `shadow-lg` for dialogs only. No gradients, no glass, no glow.
 
 **Texture.** One allowed: the 48px `surface-2` grid behind the home-page hero (`sx-hero--grid`). Parallel diagonal cuts echoing the logo's strokes are reserved for brand surfaces (covers, social banners), not UI.
 

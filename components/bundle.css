@@ -78,7 +78,7 @@ textarea.sx-input{height:auto;min-height:96px;padding:10px var(--space-3);resize
 .sx-check input:disabled,.sx-switch input:disabled{opacity:.45;cursor:not-allowed}
 
 /* Badge */
-.sx-badge{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px;border-radius:var(--radius-pill);background:var(--surface-2);color:var(--ink-2);font-family:var(--font-sans);font-size:12px;line-height:16px;font-weight:600;white-space:nowrap}
+.sx-badge{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px;border-radius:var(--radius-sm);background:var(--surface-2);color:var(--ink-2);font-family:var(--font-sans);font-size:12px;line-height:16px;font-weight:600;white-space:nowrap}
 .sx-badge--accent{background:var(--accent-soft);color:var(--accent-text)}
 .sx-badge--success{background:var(--success-soft);color:var(--success)}
 .sx-badge--warning{background:var(--warning-soft);color:var(--warning)}
