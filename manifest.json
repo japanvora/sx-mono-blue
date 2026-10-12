@@ -116,9 +116,24 @@
    "summary": "The small-screen navigation: a menu button in the Navbar (shown below 720px, or always with `sx-nav--compact`) opens a right-side drawer with large tap-target links and full-width actions."
   },
   {
+   "name": "Breadcrumbs",
+   "group": "Website",
+   "summary": "The trail back up the page hierarchy, shown above the page title on anything two levels deep or more."
+  },
+  {
    "name": "Hero",
    "group": "Marketing",
    "summary": "The landing-page opener: eyebrow, one headline, a lede, up to two CTAs and a mono proof-point row."
+  },
+  {
+   "name": "PageHeader",
+   "group": "Website",
+   "summary": "The opener for every page that isn't the home page: breadcrumbs, eyebrow, H1, lede and optional meta line, closed by a hairline."
+  },
+  {
+   "name": "Section",
+   "group": "Website",
+   "summary": "The page band: vertical rhythm plus the centred 1200px container."
   },
   {
    "name": "SectionHeader",
@@ -131,6 +146,36 @@
    "summary": "A numbered grid of capabilities — mono index, title, one-sentence body — in auto-fit columns."
   },
   {
+   "name": "Steps",
+   "group": "Website",
+   "summary": "A numbered process: how an engagement runs, or what happens after someone books a call."
+  },
+  {
+   "name": "ProductCard",
+   "group": "Website",
+   "summary": "A product in a grid — its mark, name, one-line role and a sentence of what it does."
+  },
+  {
+   "name": "Accordion",
+   "group": "Website",
+   "summary": "FAQ and disclosure lists, built on native `<details>`/`<summary>` so it works with no JavaScript and is searchable by the browser's find."
+  },
+  {
+   "name": "Prose",
+   "group": "Website",
+   "summary": "Long-form typography for pages that are mostly words: privacy policy, terms of use, grievance redressal, disclosures, articles."
+  },
+  {
+   "name": "CTABand",
+   "group": "Website",
+   "summary": "The closing ask on a page: one heading, one line of context, one or two actions, on the Midnight primary fill."
+  },
+  {
+   "name": "ContactBlock",
+   "group": "Website",
+   "summary": "The ways to reach the business: email, a booking link, and the grievance address — each with an icon, label, value and a one-line expectation."
+  },
+  {
    "name": "Footer",
    "group": "Layout",
    "summary": "The site footer: logo + one-line positioning, 2–3 link columns, the Disclaimer, and the legal line with the registered entity name."
@@ -139,6 +184,11 @@
    "name": "Disclaimer",
    "group": "Compliance",
    "summary": "The standard regulatory notice, set small in `ink-3` above a hairline — required on every public page and in every client-facing export."
+  },
+  {
+   "name": "CookieBar",
+   "group": "Website",
+   "summary": "The consent notice, pinned to the bottom of the viewport until the visitor chooses."
   },
   {
    "name": "Dialog",
@@ -220,7 +270,7 @@
  "lastChange": {
   "by": "Neo",
   "via": "claude.ai chat",
-  "at": "2026-09-23T16:02:18Z",
-  "note": "Rebuilt manifest.json: component catalogue and asset groups registered."
+  "at": "2026-09-23T16:57:30Z",
+  "note": "Website layer: Section, PageHeader, Breadcrumbs, Prose, Accordion, Steps, CTABand, ContactBlock, ProductCard, CookieBar."
  }
 }
