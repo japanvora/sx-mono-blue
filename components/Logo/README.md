@@ -20,7 +20,7 @@ Add `<span class="sx-logo__tag">…</span>` after the word for the tagline. Reac
 - Clear space: the cap height of the X on every side. Minimum: mark 20px, lockup 120px wide, tagline only when the lockup is ≥ 280px wide.
 - One logo per view. The consumer provides `href` and the `aria-label`.
 
-## Product sub-brands — ORION, MIZAR, MERAK, ORBIT, EIGEN
+## Product sub-brands — ORION, MIZAR, MERAK, ORBIT, EIGEN, CELESTIA, ALCOR
 Each stateXchange product has its own mark, built from one rule so the family reads together: **an angular container cut into two pieces (Electric over Midnight, rotated like the S's two strokes) holding diamond stars from that product's namesake.** Same 13-unit stroke, square cuts, palette and uppercase Montserrat Bold wordmark (+0.06em tracking). The container shape is what tells them apart:
 
 | Product | Container | Stars | Meaning |
@@ -30,13 +30,17 @@ Each stateXchange product has its own mark, built from one rule so the family re
 | **MERAK** | triangle, apex up | two stacked on the centre line | Merak and Dubhe, the "pointer" stars that lead to the North Star — the apex |
 | **ORBIT** | octagon (the angular circle) | one large at the centre + one small sitting in the ring's gap | a body with a satellite on its orbit path — the cut in the ring is where the satellite travels |
 | **EIGEN** | square split into matrix brackets `[ ]` | three on the diagonal, growing | an eigenvector: the direction a matrix keeps, only scaled — v, λv, λ²v |
+| **CELESTIA** | lens — two long flat lids meeting at points left and right | one large at the centre + one small outside, upper right | an aperture that observes: the lens is open on the sky, the centre star is what it holds in view and the small star is the field beyond |
+| **ALCOR** | double chevron — MIZAR's diamond opened into two halves, a gap between them | one large low in the lower chevron + one small in the gap, right | Alcor is Mizar's companion seen the other way round: the large star is Alcor, held by the receiving chevron; the small one is MIZAR, the source it reads. The open diamond says the two are one pair, split into sender and receptor |
 
-- React: `<SX.Logo product="orion|mizar|merak|orbit|eigen" />`. "by stateXchange" shows at `md`/`lg`, drops at `sm`; force with `endorsed`.
+- React: `<SX.Logo product="orion|mizar|merak|orbit|eigen|celestia|alcor" />`. "by stateXchange" shows at `md`/`lg`, drops at `sm`; force with `endorsed`.
 - Class API: `sx-logo sx-logo--product sx-logo--<name>`, the product's mark SVG, `<span class="sx-logo__word sx-logo__word--product">NAME</span>` and optionally `<span class="sx-logo__by">by <b>state<span class="sx-logo__x">X</span>change</b></span>`.
 - **Endorsed** lockup on first-contact surfaces (login, docs, contracts, marketing); **plain** lockup inside the product after sign-in.
 - Never merge a product mark with the S; when shown together the stateXchange logo leads, products sit at equal or smaller size. Never mix two product marks in one lockup.
 - Below 24px use each product's `-mark-small.svg` (one star).
-- A new product follows the same rule: a new container polygon (not a hexagon, diamond, triangle, octagon or square — pentagon and heptagon remain) + its own star pattern.
+- **ALCOR is its own product, not a MIZAR variant** — separate mark, separate lockup, separate name. It is a parallel system that depends on MIZAR to function, which is why its container is MIZAR's diamond opened rather than a new polygon, and why its star pair is MIZAR's inverted. Never show ALCOR's mark as a MIZAR lockup or lock the two marks together.
+- CELESTIA's geometry is the approved mark scaled to 0.9 so its wide lens clears the 100-unit box; its stroke is therefore 11.7, not 13. That is deliberate — do not re-weight it.
+- A new product follows the same rule: a new container polygon (not a hexagon, diamond, triangle, octagon, square, lens or double chevron — pentagon and heptagon remain) + its own star pattern. A container *derived* from another product's — as ALCOR's is from MIZAR's — is reserved for a product that technically depends on that one + its own star pattern.
 
 ORION mark:
 ```html
@@ -88,5 +92,24 @@ EIGEN mark:
   <rect class="sx-logo__belt-a" x="43.5" y="43.5" width="13" height="13" transform="rotate(45 50 50)"/>
   <rect class="sx-logo__belt-a" x="56" y="26" width="18" height="18" transform="rotate(45 65 35)"/>
   
+</svg>
+```
+CELESTIA mark (stroke 11.7):
+```html
+<svg class="sx-logo__mark" viewBox="0 0 100 100" aria-hidden="true">
+  <polyline class="sx-logo__top" points="18.86,57.92 7.70,50.00 35.60,30.20 64.40,30.20 74.16,37.13"/>
+  <polyline class="sx-logo__bot" points="81.14,42.08 92.30,50.00 64.40,69.80 35.60,69.80 25.84,62.87"/>
+  <rect class="sx-logo__belt-a" x="42.80" y="42.80" width="14.4" height="14.4" transform="rotate(45 50 50)"/>
+  <rect class="sx-logo__belt-b" x="74.75" y="18.05" width="8.1" height="8.1" transform="rotate(45 78.8 22.1)"/>
+</svg>
+```
+
+ALCOR mark:
+```html
+<svg class="sx-logo__mark" viewBox="0 0 100 100" aria-hidden="true">
+  <polyline class="sx-logo__top" points="10,50 50,10 90,50"/>
+  <polyline class="sx-logo__bot" points="10,90 50,50 90,90"/>
+  <rect class="sx-logo__belt-a" x="43" y="69" width="14" height="14" transform="rotate(45 50 76)"/>
+  <rect class="sx-logo__belt-b" x="66.5" y="46.5" width="7" height="7" transform="rotate(45 70 50)"/>
 </svg>
 ```

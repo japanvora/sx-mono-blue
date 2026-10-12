@@ -14,6 +14,22 @@ The interface system for stateXchange web apps and sites: Midnight and Electric 
 - The registered legal entity name appears in the footer; "stateXchange" is the trade name.
 - Numbers: Indian digit grouping is optional, but be consistent per surface; units always shown (ms, %, ₹); timestamps in IST, 24-hour, mono.
 
+### Product UI copy (apps, consoles, client portals)
+
+The screen speaks through labels, values, states and hierarchy, not prose. Before keeping a visible sentence, ask: does the user need to read this, or does the interface already say it?
+
+- **No requirement or rule IDs on screen.** `FR-4.4`, `A6`, `RA-1`, "Rule INV-4", "(409)" live in `data-rule` attributes, tests, logs and docs. A breadcrumb names a place the user can go to, or is left out.
+- **The product never narrates itself.** Never make the backend, "the server" or "the system" the subject ("Merak refuses the invoice"); state the outcome ("The next invoice is blocked"). No rationale on screen ("by design", "deliberately", "That is deliberate").
+- **A note is the consequence and the next step, in at most two sentences.** Why a rule exists belongs in the documentation.
+- **Explain a rule once**, on the screen that enforces it. Elsewhere a badge or one line is enough.
+- **Helper text carries a constraint** (format, limit, who sees it), never the field's purpose. A placeholder never repeats its label. No lede under a self-explanatory title.
+- **Empty states:** "No invoices yet." plus the action, if the screen has one.
+- **Internal values are never copy:** enums (`KYC_PENDING`), snake_case keys, HTTP codes, API paths, environment variables, template keys, type names, row numbers. States go through a label map. Hashes appear only in staff evidence views, never to clients.
+- **Errors:** one plain sentence and how to fix it. A staff console may keep a reference code in a collapsed Details line; a client-facing app shows none.
+- **Server messages are UI copy.** Any `message` that can reach a screen follows these rules.
+- **Keep what the user cannot infer:** the consequences of irreversible, destructive, billing, legal and security actions, privacy warnings and escalation paths. Shorten them; never remove them.
+- Each app enforces this with a copy gate test; its CLAUDE.md names it.
+
 ## Visual foundations
 
 **Colour.** White `bg` ground, `ink` text, `primary` (Midnight #191970) for the one main action, `accent` (Electric #2F6BFF) for focus, selection and the X. Electric is a highlight, not a text colour — small text and links use `accent-text` (#1F55E0). States: `success` (Live), `warning` (Paused), `danger` (Error, destructive) — each with a `-soft` ground for badges and alerts. Data series use `chart-1…chart-4` in order (Electric, Midnight, mid-blue, Slate). Dark theme: `bg` #0B0F1E, Midnight becomes pale (`logo-base` #DCE3FF) and actions switch to electric-light #7AA2FF with dark text. Every text token passes 4.5:1 on `bg`, `surface` and `surface-2` in both themes; `border-control` passes 3:1 for control outlines. `border` is decorative only.
@@ -43,6 +59,6 @@ Each product gets its own mark from one rule: an angular container cut into two 
 1. Load `components/bundle.css` after `tokens.css` (bundle.css imports the three Google fonts).
 2. Set `<html data-theme="light">` or call `SX.initTheme()` (system preference + remembered choice); `SX.setTheme("dark")` to switch.
 3. Either write the class API directly (`class="sx-btn sx-btn--secondary"` — works in any framework or plain HTML), or, with React 18 on the page, use `window.SX.Button`, `SX.DataTable` etc., which emit the same classes.
-4. Plain-HTML behaviours, each called once after the markup exists: `SX.initTabs()`, `SX.initNav()` (mobile drawer), `SX.initIcons()` (`<i data-sx-icon>`), `SX.renderCharts()` (`data-sx-chart` / `data-sx-spark`). `SX.toast({...})` works anywhere.
+4. Plain-HTML behaviours, each called once after the markup exists: `SX.initTabs()`, `SX.initNav()` (mobile drawer), `SX.initIcons()` (`<i data-sx-icon>`), `SX.renderCharts()` (`data-sx-chart` / `data-sx-spark`), `SX.initCookieBar()`. `SX.toast({...})` works anywhere.
 
-Components: Icon · Logo · Button · Link · Field · Select · Checkbox · Switch · Badge · Alert · Toast · EmptyState · Card · Stat · Chart · DataTable · Pagination · Tabs · Navbar · MobileMenu · Hero · SectionHeader · FeatureGrid · Footer · Disclaimer · Dialog.
+Components — app layer: Icon · Logo · Button · Link · Field · Select · Checkbox · Switch · Badge · Alert · Toast · EmptyState · Card · Stat · Chart · DataTable · Pagination · Tabs · Navbar · MobileMenu · Dialog. Website layer: Hero · PageHeader · Section · SectionHeader · Breadcrumbs · FeatureGrid · Steps · ProductCard · Accordion · Prose · CTABand · ContactBlock · Footer · Disclaimer · CookieBar.

@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SX","components":[{"name":"Logo"},{"name":"Button"},{"name":"Link"},{"name":"Field"},{"name":"Select"},{"name":"Checkbox"},{"name":"Switch"},{"name":"Badge"},{"name":"Alert"},{"name":"Card"},{"name":"Stat"},{"name":"DataTable"},{"name":"Tabs"},{"name":"Navbar"},{"name":"Hero"},{"name":"SectionHeader"},{"name":"FeatureGrid"},{"name":"Footer"},{"name":"Disclaimer"},{"name":"Dialog"},{"name":"Icon"},{"name":"Toast"},{"name":"Pagination"},{"name":"Chart"},{"name":"EmptyState"},{"name":"MobileMenu"}]} */
+/* @ds-bundle: {"format":4,"namespace":"SX","components":[{"name":"Logo"},{"name":"Button"},{"name":"Link"},{"name":"Field"},{"name":"Select"},{"name":"Checkbox"},{"name":"Switch"},{"name":"Badge"},{"name":"Alert"},{"name":"Card"},{"name":"Stat"},{"name":"DataTable"},{"name":"Tabs"},{"name":"Navbar"},{"name":"Hero"},{"name":"SectionHeader"},{"name":"FeatureGrid"},{"name":"Footer"},{"name":"Disclaimer"},{"name":"Dialog"},{"name":"Icon"},{"name":"Toast"},{"name":"Pagination"},{"name":"Chart"},{"name":"EmptyState"},{"name":"MobileMenu"},{"name":"Section"},{"name":"PageHeader"},{"name":"Breadcrumbs"},{"name":"Prose"},{"name":"Accordion"},{"name":"Steps"},{"name":"CTABand"},{"name":"ContactBlock"},{"name":"ProductCard"},{"name":"CookieBar"}]} */
 (function(){
 "use strict";
 var R=window.React;
@@ -125,11 +125,23 @@ SX.initNav=function(scope){Array.prototype.forEach.call((scope||document).queryS
   btn.addEventListener("click",open);if(bd)bd.addEventListener("click",close);
   Array.prototype.forEach.call(dr.querySelectorAll("[data-sx-drawer-close]"),function(c){c.addEventListener("click",close);});});};
 
+
+/* ---- cookie bar (class API) ---- */
+SX.initCookieBar=function(scope){
+  var bar=(scope||document).querySelector(".sx-cookie");if(!bar)return;
+  var key=bar.getAttribute("data-sx-key")||"sx-cookie-consent",v=null;
+  try{v=localStorage.getItem(key);}catch(e){}
+  if(v){bar.hidden=true;return;}
+  bar.hidden=false;
+  Array.prototype.forEach.call(bar.querySelectorAll("[data-sx-consent]"),function(b){
+    b.addEventListener("click",function(){try{localStorage.setItem(key,b.getAttribute("data-sx-consent"));}catch(e){}bar.hidden=true;});});
+};
+
 /* ---- React components (only when React is on the page) ---- */
 if(R){
   var h=R.createElement;
   var MARK=function(){return h("svg",{className:"sx-logo__mark",viewBox:"0 0 100 100","aria-hidden":"true"},h("polyline",{className:"sx-logo__top",points:"82,8 24,44 48,60"}),h("polyline",{className:"sx-logo__bot",points:"52,40 76,56 18,92"}));};
-  var PRODUCT_MARKS={"orion": {"p1": "16,64 16,30 50,10 84,30", "p2": "84,36 84,70 50,90 16,70", "stars": [[35, 62, 12, "b"], [50, 50, 12, "a"], [65, 38, 12, "b"]]}, "mizar": {"p1": "22,64 8,50 50,8 68,26", "p2": "78,36 92,50 50,92 32,74", "stars": [[44, 56, 17, "a"], [61, 39, 9, "b"]]}, "merak": {"p1": "30,88 12,88 50,12 63,38", "p2": "71,54 88,88 42,88", "stars": [[50, 72, 10, "b"], [50, 54, 14, "a"]]}, "orbit": {"p1": "14.6,69.5 11.2,66.1 11.2,33.9 33.9,11.2 66.1,11.2 69.5,14.6", "p2": "85.4,30.5 88.8,33.9 88.8,66.1 66.1,88.8 33.9,88.8 30.5,85.4", "stars": [[50, 50, 18, "a"], [77.5, 22.5, 10, "a"]]}, "eigen": {"p1": "36,12 12,12 12,88 36,88", "p2": "64,88 88,88 88,12 64,12", "stars": [[35, 65, 9, "b"], [50, 50, 13, "a"], [65, 35, 18, "a"]]}};
+  var PRODUCT_MARKS={"orion": {"p1": "16,64 16,30 50,10 84,30", "p2": "84,36 84,70 50,90 16,70", "stars": [[35, 62, 12, "b"], [50, 50, 12, "a"], [65, 38, 12, "b"]]}, "mizar": {"p1": "22,64 8,50 50,8 68,26", "p2": "78,36 92,50 50,92 32,74", "stars": [[44, 56, 17, "a"], [61, 39, 9, "b"]]}, "merak": {"p1": "30,88 12,88 50,12 63,38", "p2": "71,54 88,88 42,88", "stars": [[50, 72, 10, "b"], [50, 54, 14, "a"]]}, "orbit": {"p1": "14.6,69.5 11.2,66.1 11.2,33.9 33.9,11.2 66.1,11.2 69.5,14.6", "p2": "85.4,30.5 88.8,33.9 88.8,66.1 66.1,88.8 33.9,88.8 30.5,85.4", "stars": [[50, 50, 18, "a"], [77.5, 22.5, 10, "a"]]}, "eigen": {"p1": "36,12 12,12 12,88 36,88", "p2": "64,88 88,88 88,12 64,12", "stars": [[35, 65, 9, "b"], [50, 50, 13, "a"], [65, 35, 18, "a"]]}, "celestia": {"p1": "18.86,57.92 7.70,50.00 35.60,30.20 64.40,30.20 74.16,37.13", "p2": "81.14,42.08 92.30,50.00 64.40,69.80 35.60,69.80 25.84,62.87", "stars": [[50, 50, 14.4, "a"], [78.8, 22.1, 8.1, "b"]]}, "alcor": {"p1": "10,50 50,10 90,50", "p2": "10,90 50,50 90,90", "stars": [[50, 76, 14, "a"], [70, 50, 7, "b"]]}};
   var MARK_P=function(pp){var m=PRODUCT_MARKS[pp.product];return h("svg",{className:"sx-logo__mark",viewBox:"0 0 100 100","aria-hidden":"true"},h("polyline",{className:"sx-logo__top",points:m.p1}),h("polyline",{className:"sx-logo__bot",points:m.p2}),m.stars.map(function(s,i){return h("rect",{key:i,className:"sx-logo__belt-"+s[3],x:s[0]-s[2]/2,y:s[1]-s[2]/2,width:s[2],height:s[2],transform:"rotate(45 "+s[0]+" "+s[1]+")"});}));};
   SX.productMarks=PRODUCT_MARKS;
   SX.Logo=function(p){
@@ -289,6 +301,71 @@ if(R){
         h("nav",{"aria-label":"Primary"},h("ul",{className:"sx-nav__links"},(p.links||[]).map(function(l){return h("li",{key:l.href},h("a",{className:"sx-nav__link",href:l.href,"aria-current":l.current?"page":null},l.label));}))),
         h("div",{className:"sx-nav__actions"},p.actions,h("button",{className:"sx-icon-btn sx-nav__toggle",type:"button","aria-label":"Open menu","aria-expanded":open?"true":"false","aria-controls":did,onClick:function(){setOpen(true);}},h(SX.Icon,{name:"menu"}))))),
       open?h(SX.MobileMenu,{id:did,links:p.links,actions:p.mobileActions||p.actions,onClose:function(){setOpen(false);}}):null);
+  };
+  SX.Section=function(p){return h("section",{id:p.id,className:cx("sx-section",p.variant&&"sx-section--"+p.variant,p.className)},h("div",{className:"sx-container"},p.children));};
+  SX.Breadcrumbs=function(p){
+    var items=p.items||[];
+    return h("nav",{"aria-label":"Breadcrumb"},h("ol",{className:cx("sx-breadcrumbs",p.className)},items.map(function(it,i){
+      var last=i===items.length-1;
+      return h("li",{key:i},last||!it.href?h("span",{"aria-current":last?"page":null},it.label):h("a",{href:it.href},it.label));})));
+  };
+  SX.PageHeader=function(p){
+    return h("header",{className:cx("sx-page-head",p.className)},h("div",{className:"sx-container"},
+      p.breadcrumbs?h(SX.Breadcrumbs,{items:p.breadcrumbs}):null,
+      p.eyebrow?h("p",{className:"sx-page-head__eyebrow"},p.eyebrow):null,
+      h("h1",{className:"sx-page-head__title"},p.title),
+      p.lede?h("p",{className:"sx-page-head__lede"},p.lede):null,
+      p.meta?h("p",{className:"sx-page-head__meta"},p.meta):null));
+  };
+  SX.Prose=function(p){
+    var body=p.html?h("div",{dangerouslySetInnerHTML:{__html:p.html}}):p.children;
+    return h("div",{className:cx("sx-prose",p.className)},p.updated?h("p",{className:"sx-prose__updated"},"Last updated "+p.updated):null,body);
+  };
+  SX.Accordion=function(p){
+    return h("div",{className:cx("sx-accordion",p.className)},(p.items||[]).map(function(it,i){
+      return h("details",{key:i,className:"sx-accordion__item",open:i===p.openIndex},
+        h("summary",null,it.question,h(SX.Icon,{name:"chevron-down"})),
+        h("div",{className:"sx-accordion__body"},it.answer));}));
+  };
+  SX.Steps=function(p){
+    return h("ol",{className:cx("sx-steps",p.layout==="row"&&"sx-steps--row",p.className)},(p.items||[]).map(function(it,i){
+      return h("li",{key:i,className:"sx-step"},h("span",{className:"sx-step__n","aria-hidden":"true"}),
+        h("h3",{className:"sx-step__title"},it.title),it.body?h("p",{className:"sx-step__body"},it.body):null);}));
+  };
+  SX.CTABand=function(p){
+    return h("div",{className:cx("sx-cta",p.className)},
+      h("div",null,h("h2",{className:"sx-cta__title"},p.title),p.lede?h("p",{className:"sx-cta__lede"},p.lede):null),
+      p.actions?h("div",{className:"sx-cta__actions"},p.actions):null);
+  };
+  SX.ContactBlock=function(p){
+    return h("div",{className:cx("sx-contact",p.className)},(p.items||[]).map(function(it,i){
+      return h("div",{key:i,className:"sx-contact__item"},
+        h("span",{className:"sx-contact__icon","aria-hidden":"true"},h(SX.Icon,{name:it.icon||"mail"})),
+        h("div",null,h("p",{className:"sx-contact__label"},it.label),
+          h("p",{className:"sx-contact__value"},it.href?h("a",{href:it.href},it.value):it.value),
+          it.note?h("p",{className:"sx-contact__note"},it.note):null));}));
+  };
+  SX.ProductCard=function(p){
+    var m=PRODUCT_MARKS[p.product];
+    var mark=m?h("svg",{className:"sx-product__mark",viewBox:"0 0 100 100","aria-hidden":"true"},
+      h("polyline",{className:"sx-logo__top",points:m.p1}),h("polyline",{className:"sx-logo__bot",points:m.p2}),
+      m.stars.map(function(s,i){return h("rect",{key:i,className:"sx-logo__belt-"+s[3],x:s[0]-s[2]/2,y:s[1]-s[2]/2,width:s[2],height:s[2],transform:"rotate(45 "+s[0]+" "+s[1]+")"});})):null;
+    return h(p.href?"a":"div",{className:cx("sx-product",p.className),href:p.href},
+      h("div",{className:"sx-product__head"},mark,h("div",null,h("h3",{className:"sx-product__name"},p.name||(p.product||"").toUpperCase()),p.role?h("p",{className:"sx-product__role"},p.role):null)),
+      p.body?h("p",{className:"sx-product__body"},p.body):null,p.children);
+  };
+  SX.CookieBar=function(p){
+    var key=p.storageKey||"sx-cookie-consent";
+    var st=R.useState(false),show=st[0],set=st[1];
+    R.useEffect(function(){var v=null;try{v=localStorage.getItem(key);}catch(e){}set(!v);},[key]);
+    function choose(v){try{localStorage.setItem(key,v);}catch(e){}set(false);if(p.onChoice)p.onChoice(v);}
+    if(!show)return null;
+    return h("div",{className:"sx-cookie",role:"region","aria-label":"Cookie notice"},
+      h("p",{className:"sx-cookie__text"},p.text||"We use only the cookies needed to run this site and to remember your theme. No advertising or tracking cookies."),
+      h("div",{className:"sx-cookie__actions"},
+        p.policyHref?h("a",{className:"sx-btn sx-btn--ghost sx-btn--sm",href:p.policyHref},"Privacy policy"):null,
+        h("button",{className:"sx-btn sx-btn--secondary sx-btn--sm",type:"button",onClick:function(){choose("essential");}},"Essential only"),
+        h("button",{className:"sx-btn sx-btn--sm",type:"button",onClick:function(){choose("all");}},"Accept")));
   };
 }
 window.SX=SX;
