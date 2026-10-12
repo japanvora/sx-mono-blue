@@ -7,7 +7,7 @@ export declare function initTheme(): "light" | "dark";
 /** Wires keyboard + click behaviour for class-API tabs (`.sx-tabs[role=tablist]`). */
 export declare function initTabs(scope?: ParentNode): void;
 
-/** Brand lockup — stateXchange or a product sub-brand (product="orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor" | "alcor"; endorsement line "by stateXchange" defaults on at md/lg). Classes: sx-logo, sx-logo--product, sx-logo--orion|mizar|merak|orbit|eigen|celestia|alcor, sx-logo__word--product, sx-logo__by, sx-logo__belt-a|b, sx-logo--sm|lg, sx-logo__mark, sx-logo__word, sx-logo__x, sx-logo__tag. */
+/** Brand lockup — stateXchange or a product sub-brand (product="orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor"; endorsement line "by stateXchange" defaults on at md/lg). Classes: sx-logo, sx-logo--product, sx-logo--orion|mizar|merak|orbit|eigen|celestia|alcor, sx-logo__word--product, sx-logo__by, sx-logo__belt-a|b, sx-logo--sm|lg, sx-logo__mark, sx-logo__word, sx-logo__x, sx-logo__tag. */
 export interface LogoProps { product?: "statexchange" | "orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor"; size?: "sm" | "md" | "lg"; variant?: "lockup" | "mark" | "wordmark"; tagline?: boolean; endorsed?: boolean; href?: string; className?: string }
 export declare function Logo(p: LogoProps): JSX.Element;
 

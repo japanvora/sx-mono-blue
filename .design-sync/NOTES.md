@@ -8,3 +8,9 @@
 
 ## Re-sync risks
 - Any new `var(--x)` in bundle.css must exist in tokens.css — check before syncing.
+
+## 2026-10-12 — the published design system is the claude.ai artifact, not the Claude Design project
+- The Claude Design project pinned in config.json (c1f0db7b) is not visible to the account now signed in to /design-login; the live design system is https://claude.ai/artifact/3CTMPhpAdEvjDEK91HSDT5 (Design System artifact type, files under project/).
+- The repo and the artifact had drifted both ways (repo: 1-2 Oct table rules; artifact: website layer, CELESTIA/ALCOR logos). Merged 12-Oct by importing the artifact on a branch from the 23-Sep base and merging three-way; both now carry the same tokens.json, bundle.css, bundle.js, index.d.ts and component docs.
+- The artifact builds its CSS variables from tokens.json, not from components/tokens.css: any new var(--x) in bundle.css must be added to tokens.json too (space-1-5 and width-cell-wrap were missing there until 12-Oct).
+- Repo logo SVGs carry an embedded content-credentials block; the artifact's uploads are the same drawings without it. Not a difference to sync.
