@@ -265,6 +265,17 @@
     "eigen-mark-small.svg",
     "eigen-mark.svg"
    ]
+  },
+  {
+   "name": "CYGNUSALPHA",
+   "order": [
+    "cygnusalpha-lockup-dark.svg",
+    "cygnusalpha-lockup-endorsed-dark.svg",
+    "cygnusalpha-lockup-endorsed.svg",
+    "cygnusalpha-lockup.svg",
+    "cygnusalpha-mark-small.svg",
+    "cygnusalpha-mark.svg"
+   ]
   }
  ],
  "lastChange": {

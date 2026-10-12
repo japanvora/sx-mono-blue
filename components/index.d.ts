@@ -7,8 +7,8 @@ export declare function initTheme(): "light" | "dark";
 /** Wires keyboard + click behaviour for class-API tabs (`.sx-tabs[role=tablist]`). */
 export declare function initTabs(scope?: ParentNode): void;
 
-/** Brand lockup — stateXchange or a product sub-brand (product="orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor"; endorsement line "by stateXchange" defaults on at md/lg). Classes: sx-logo, sx-logo--product, sx-logo--orion|mizar|merak|orbit|eigen|celestia|alcor, sx-logo__word--product, sx-logo__by, sx-logo__belt-a|b, sx-logo--sm|lg, sx-logo__mark, sx-logo__word, sx-logo__x, sx-logo__tag. */
-export interface LogoProps { product?: "statexchange" | "orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor"; size?: "sm" | "md" | "lg"; variant?: "lockup" | "mark" | "wordmark"; tagline?: boolean; endorsed?: boolean; href?: string; className?: string }
+/** Brand lockup — stateXchange or a product sub-brand (product="orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor" | "cygnusalpha"; endorsement line "by stateXchange" defaults on at md/lg). Classes: sx-logo, sx-logo--product, sx-logo--orion|mizar|merak|orbit|eigen|celestia|alcor|cygnusalpha, sx-logo__word--product, sx-logo__by, sx-logo__belt-a|b, sx-logo--sm|lg, sx-logo__mark, sx-logo__word, sx-logo__x, sx-logo__tag. */
+export interface LogoProps { product?: "statexchange" | "orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor" | "cygnusalpha"; size?: "sm" | "md" | "lg"; variant?: "lockup" | "mark" | "wordmark"; tagline?: boolean; endorsed?: boolean; href?: string; className?: string }
 export declare function Logo(p: LogoProps): JSX.Element;
 
 /** Action button. Classes: sx-btn, sx-btn--secondary|ghost|danger, sx-btn--sm|lg, sx-btn--block. */
@@ -159,7 +159,7 @@ export interface ContactBlockProps { items: Array<{ icon?: IconName; label: stri
 export declare function ContactBlock(p: ContactBlockProps): JSX.Element;
 
 /** Product card carrying a product mark. Classes: sx-products (grid), sx-product, sx-product__head|mark|name|role|body. */
-export interface ProductCardProps { product?: "orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor"; name?: ReactNode; role?: ReactNode; body?: ReactNode; href?: string; className?: string; children?: ReactNode }
+export interface ProductCardProps { product?: "orion" | "mizar" | "merak" | "orbit" | "eigen" | "celestia" | "alcor" | "cygnusalpha"; name?: ReactNode; role?: ReactNode; body?: ReactNode; href?: string; className?: string; children?: ReactNode }
 export declare function ProductCard(p: ProductCardProps): JSX.Element;
 
 /** Consent bar, remembered in localStorage. Class API: markup with .sx-cookie + [data-sx-consent] buttons, then SX.initCookieBar(). */
