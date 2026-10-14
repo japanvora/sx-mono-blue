@@ -20,7 +20,7 @@ Add `<span class="sx-logo__tag">…</span>` after the word for the tagline. Reac
 - Clear space: the cap height of the X on every side. Minimum: mark 20px, lockup 120px wide, tagline only when the lockup is ≥ 280px wide.
 - One logo per view. The consumer provides `href` and the `aria-label`.
 
-## Product sub-brands — ORION, MIZAR, MERAK, ORBIT, EIGEN, CELESTIA, ALCOR, CYGNUS ALPHA
+## Product sub-brands — ORION, MIZAR, MERAK, ORBIT, EIGEN, CELESTIA, ALCOR, CYGNUS ALPHA, KEPLER
 Each stateXchange product has its own mark, built from one rule so the family reads together: **an angular container cut into two pieces (Electric over Midnight, rotated like the S's two strokes) holding diamond stars from that product's namesake.** Same 13-unit stroke, square cuts, palette and uppercase Montserrat Bold wordmark (+0.06em tracking). The container shape is what tells them apart:
 
 | Product | Container | Stars | Meaning |
@@ -33,15 +33,16 @@ Each stateXchange product has its own mark, built from one rule so the family re
 | **CELESTIA** | lens — two long flat lids meeting at points left and right | one large at the centre + one small outside, upper right | an aperture that observes: the lens is open on the sky, the centre star is what it holds in view and the small star is the field beyond |
 | **ALCOR** | double chevron — MIZAR's diamond opened into two halves, a gap between them | one large low in the lower chevron + one small in the gap, right | Alcor is Mizar's companion seen the other way round: the large star is Alcor, held by the receiving chevron; the small one is MIZAR, the source it reads. The open diamond says the two are one pair, split into sender and receptor |
 | **CYGNUS ALPHA** | heptagon | one large at the centre + four small around it in a cross | Cygnus, the Northern Cross; the large centre star is Deneb, its alpha star. Product key `cygnusalpha` (the TradingView name CygnusAlpha); the wordmark reads CYGNUS ALPHA |
+| **KEPLER** | the letter K — a Midnight stem and an Electric chevron whose point touches it | one large in the K's mouth + one small just outside it, on the centre line | Kepler's orbit: the Sun held in the open K, the planet leaving on the open side of its path. The one letter-shaped container in the family, as the stateXchange S is a letter |
 
-- React: `<SX.Logo product="orion|mizar|merak|orbit|eigen|celestia|alcor|cygnusalpha" />`. "by stateXchange" shows at `md`/`lg`, drops at `sm`; force with `endorsed`.
+- React: `<SX.Logo product="orion|mizar|merak|orbit|eigen|celestia|alcor|cygnusalpha|kepler" />`. "by stateXchange" shows at `md`/`lg`, drops at `sm`; force with `endorsed`.
 - Class API: `sx-logo sx-logo--product sx-logo--<name>`, the product's mark SVG, `<span class="sx-logo__word sx-logo__word--product">NAME</span>` and optionally `<span class="sx-logo__by">by <b>state<span class="sx-logo__x">X</span>change</b></span>`.
 - **Endorsed** lockup on first-contact surfaces (login, docs, contracts, marketing); **plain** lockup inside the product after sign-in.
 - Never merge a product mark with the S; when shown together the stateXchange logo leads, products sit at equal or smaller size. Never mix two product marks in one lockup.
 - Below 24px use each product's `-mark-small.svg` (one star).
 - **ALCOR is its own product, not a MIZAR variant** — separate mark, separate lockup, separate name. It is a parallel system that depends on MIZAR to function, which is why its container is MIZAR's diamond opened rather than a new polygon, and why its star pair is MIZAR's inverted. Never show ALCOR's mark as a MIZAR lockup or lock the two marks together.
 - CELESTIA's geometry is the approved mark scaled to 0.9 so its wide lens clears the 100-unit box; its stroke is therefore 11.7, not 13. That is deliberate — do not re-weight it.
-- A new product follows the same rule: a new container polygon (not a hexagon, diamond, triangle, octagon, square, lens, double chevron or heptagon — pentagon remains) + its own star pattern. A container *derived* from another product's — as ALCOR's is from MIZAR's — is reserved for a product that technically depends on that one + its own star pattern.
+- A new product follows the same rule: a new container polygon (not a hexagon, diamond, triangle, octagon, square, lens, double chevron, heptagon or the K letterform — pentagon remains) + its own star pattern. A container *derived* from another product's — as ALCOR's is from MIZAR's — is reserved for a product that technically depends on that one + its own star pattern.
 
 ORION mark:
 ```html
@@ -125,5 +126,15 @@ CYGNUS ALPHA mark:
   <rect class="sx-logo__belt-b" x="46" y="26" width="8" height="8" transform="rotate(45 50 30)"/>
   <rect class="sx-logo__belt-b" x="27" y="46" width="8" height="8" transform="rotate(45 31 50)"/>
   <rect class="sx-logo__belt-b" x="65" y="46" width="8" height="8" transform="rotate(45 69 50)"/>
+</svg>
+```
+
+KEPLER mark:
+```html
+<svg class="sx-logo__mark" viewBox="0 0 100 100" aria-hidden="true">
+  <polyline class="sx-logo__top" points="80,8 38,50 80,92"/>
+  <polyline class="sx-logo__bot" points="22,8 22,92"/>
+  <rect class="sx-logo__belt-a" x="54" y="43" width="14" height="14" transform="rotate(45 61 50)"/>
+  <rect class="sx-logo__belt-b" x="82" y="46" width="8" height="8" transform="rotate(45 86 50)"/>
 </svg>
 ```

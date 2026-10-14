@@ -276,6 +276,17 @@
     "cygnusalpha-mark-small.svg",
     "cygnusalpha-mark.svg"
    ]
+  },
+  {
+   "name": "KEPLER",
+   "order": [
+    "kepler-lockup-dark.svg",
+    "kepler-lockup-endorsed-dark.svg",
+    "kepler-lockup-endorsed.svg",
+    "kepler-lockup.svg",
+    "kepler-mark-small.svg",
+    "kepler-mark.svg"
+   ]
   }
  ],
  "lastChange": {
